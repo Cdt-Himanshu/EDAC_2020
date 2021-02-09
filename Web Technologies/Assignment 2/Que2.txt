@@ -1,0 +1,10 @@
+//Que1
+
+-- > 
+
+console.log("Hello edac");
+
+
+//Que 2
+
+-- > 
