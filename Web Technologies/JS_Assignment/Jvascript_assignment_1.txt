@@ -1,0 +1,207 @@
+
+//<!-- 1.WAP to illustrate implementation of functions in javascript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Assignment_1</title>
+</head>
+<body>
+    <script>
+
+        //Simple function:
+        function sum(x, y)
+        {
+            return x+y;
+        }
+        document.write("Simple function: "+sum(2,4));
+
+        document.write("<br>");
+
+
+
+        //Anonymous function:
+        var sub = function(x, y)
+        {
+            return x-y;
+        }
+        document.write("Anonymous function: "+sub(4,2));
+
+        document.write("<br>");
+
+
+
+        //Anonymous function with arrow (=>) symbol:
+        var sub1 =(x, y) => x-y;
+        document.write("Anonymous function with arrow (=>) symbol: "+sub1(6,2));
+
+        document.write("<br>");
+
+
+
+        //Anonymous + calling function:
+        var MultNextNum = function(x, y)
+        {
+            return (x * sum(x, 1));
+        }
+        document.write("Anonymous + calling function: "+MultNextNum(4, sum));
+
+        document.write("<br>");
+    </script>
+</body>
+</html>
+
+
+//<!-- 2.WAP to illustrate the declaration of object, assignment of value and display it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Assignment_2</title>
+</head>
+<body>
+    <script>
+        var a = {};
+        a["key1"]="value 1";
+        document.write("key1 = "+a.key1);
+        
+        document.write("<br>");
+   
+        a.key2 = "value 2";
+        document.write("key2 = "+a["key2"]);
+    </script>
+</body>
+</html>
+
+
+//<!-- 3.WAP to illustrate declaration of array , assignment of value to an array and display it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Assignment_3</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        arr=[1, 2, 3, 4, 5];
+        document.write("arr[1, 2, 3, 4, 5] = "+arr);
+    </script>
+</body>
+</html>
+
+
+
+
+//Que4.Write a javascript function named is_integer which checks if the passed argument is an integer.
+You can use any mathematical operator or functions defined in the Math object.
+
+
+function is_integer(x)
+{
+  if(isNaN(x))
+    {
+      console.log("Is not a Number");
+    }
+  
+  else
+    {
+   console.log("Is  a Number");
+    }
+}
+
+is_integer(5);
+
+
+//Que5 .Using the forEach function defined for an array, find the sum of the array of numbers. [ function
+add_all(arr) {...} ]
+
+ 
+function add_add(arr)
+{
+  var sum=0;
+  for(var i in arr)
+    {
+      sum+=arr[i];
+    }
+  return sum;
+}
+
+arr=[1,2,3,4,5];
+add_add(arr);
+
+//Que6 Write a JavaScript program to convert temperatures to and from celsius, fahrenheit. [ Use the
+formula : c/5 = (f-32)/9, where c = temperature in celsius and f = temperature in fahrenheit]
+
+function toCelcius(f)
+{
+ return (5/9) * (f-32);
+}
+
+toCelcius(100)
+
+//================================
+
+function toFahrenheit(c)
+{
+ return ((c*1.8)+32);
+}
+
+toFahrenheit(100)
+
+//Que 7
+
+Write a factorial function that returns the factorial of a given number, n. Make sure you return the
+calculated value and not just print it. [ function factorial(n){...} ]
+
+
+function fact(x)
+{
+  var s=1;
+ while(x>0)
+    {
+      s=s*x;
+      x--;
+    }
+  return s;
+}
+
+fact(4)
+
+//Que 8
+
+.Write a javascript function that converts a given amount of money into coins of denominations (1,
+2, 5, 10 and 25). [ function convert_to_coins(amount) {...} ]. You may choose to print the coin
+denominations used on the console. E.g. convert_to_coins(87) should print 25 25 25 10 2.
+
+
+function amt(amount,coin)
+{
+  if(amount===0)
+    {
+      return [];
+    }
+  else
+    {
+      if(amount>=coin[0])
+        {
+          x=(amount-coin[0]);
+          return [coin[0]].concat(amt(x,coin));
+        }
+      else
+        {
+          coin.shift();
+          return amt(amount,coin);
+        }
+    }
+}
+
+//console.log(amt(87,[25,10,5,2,1]));
+coin=[25,10,5,2,1];
+amt(87,coin);

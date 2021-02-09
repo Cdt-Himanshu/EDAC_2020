@@ -1,0 +1,39 @@
+JS Assignment 3
+1 What is a sparse array illustrate its importance with example.
+
+2.List  different keywords in javascript.
+  Keywords are reserved words in JavaScript that you cannot use to indicate variable labels or function names.
+ There are a total of 63 keywords that JavaScript provides to programmers. All of them are shown in the below-mentioned 
+
+abstract	arguments	await*	boolean
+break	byte	case	catch
+char	class*	const	continue
+debugger	default	delete	do
+double	else	enum*	eval
+export*	extends*	false	final
+finally	float	for	function
+goto	if	implements	import*
+in	instanceof	int	interface
+let*	long	native	new
+null	package	private	protected
+public	return	short	static
+super*	switch	synchronized	this
+throw	throws	transient	true
+try	typeof	var	void
+volatile	while	with	yield
+
+
+3 Difference between == and === operators in javascript , illustrate with example
+
+1)    ==	Compares the equality of two operands without considering type.
+2)   ===	Compares equality of two operands with type.
+
+Example: 	var a = 5, b = 10, c = "5";
+	var x = a;
+
+	a == c; // returns true
+
+	a === c; // returns false
+
+
+
